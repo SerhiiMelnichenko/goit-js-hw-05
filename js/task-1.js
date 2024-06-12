@@ -1,35 +1,55 @@
-function isEnoughCapacity(products, containerSize) {
-    let totalProducts = 0
-    for (const key in products) {
-        totalProducts += products[key]
-    } return totalProducts <= containerSize
-}
- 
-console.log(
-  isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)
-) // true
+const getUserNames = (users) => users.map(user => user.name)
+
+
+// варіант без  map або  map розписано
+// function getUserNames(users) {
+//   const result = []
+//   for (const user of users) {
+//     result.push(user.name) 
+//   }
+//   return result
+// }
+
+
+
 
 console.log(
-  isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)
-) // false
-
-console.log(
-  isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)
-) // true
-
-console.log(
-  isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)
-) // false
-
-// Напиши функцію isEnoughCapacity(products, containerSize), яка обчислює, 
-// чи помістяться всі товари в контейнер при пакуванні.
-// Функція оголошує два параметри:
-// products — об’єкт, у якому ключі містять назви товарів,
-// а їхні значення — кількість цих товарів.Наприклад, { apples: 2, grapes: 4 }.
-// containerSize — число, максимальна кількість одиниць товарів, яку в себе може вмістити контейнер.
-// Функція має повернути результат перевірки, чи помістяться всі товари в контейнер.
-// Тобто порахувати загальну кількість товарів в об’єкті products і повернути true,
-// якщо вона менше або дорівнює containerSize, і false, якщо ні.
-// Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи.
-//  У консоль будуть виведені результати її викликів.
+  getUserNames([
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    balance: 2811
+  },
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    balance: 3821
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    balance: 3793
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    balance: 2278
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    balance: 3951
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    balance: 1498
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    balance: 2764
+  },
+])
+) // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
 
