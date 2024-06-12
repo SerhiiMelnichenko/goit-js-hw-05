@@ -2,6 +2,7 @@ const getUserNames = (users) => users.map(user => user.name)
 
 
 // варіант без  map або  map розписано
+
 // function getUserNames(users) {
 //   const result = []
 //   for (const user of users) {
